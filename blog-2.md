@@ -9,6 +9,7 @@ In this blog, we will break down how each pillar works and how it directly reduc
 
 
 > Encapsulation — Controlling Access of the Data
+
 Encapsulation means bundling data and methods together and restricting direct access to internal details.
 Example:
 ```ts
@@ -41,6 +42,7 @@ Why it reduces complexity:
 - Keeps internal logic isolated
 
 > Abstraction — Hiding Unnecessary Details
+
 Abstraction focuses on exposing only what is necessary while hiding implementation details.
 
 We can get the idea of the abstraction by two method 
@@ -104,6 +106,7 @@ Why it reduces complexity:
 - Makes systems easier to extend
 
 > Inheritance — Reusing Logic
+
 Inheritance allows one class to reuse properties and methods of another.
 Example:
 
@@ -139,6 +142,7 @@ Why it reduces complexity:
 - Makes updates easier
 
 > Polymorphism — One Interface, Multiple Behaviors
+
 Polymorphism allows different classes to implement the same method in different ways.
 Example:
 
