@@ -1,4 +1,4 @@
-#Why any is a Type Safety Hole & Why unknown is Safer (with Type Narrowing)
+## Why any is a Type Safety Hole & Why unknown is Safer (with Type Narrowing)
 Introduction:
 
 TypeScript is popular because it adds type safety on top of JavaScript. But interestingly, it also gives us a way to completely bypass that safety system — using any.
@@ -13,35 +13,40 @@ In this blog, we will cover:
 
 >What type narrowing is and how it works
 
-What is any and Why Is It Dangerous?
+- What is any and Why Is It Dangerous?
 
 any essentially disables TypeScript's type checking.
 
+```ts
 let data: any = "hello";
 data = 42;
 data.toUpperCase(); 
+```
 
 Here, TypeScript does not complain at all. Whether we assign a string or a number, everything is allowed.
 
 
-What is unknown and Why Is It Safer?
+- What is unknown and Why Is It Safer?
 
 unknown is a safer alternative to any.
 
+```ts
 let value: unknown = "hello";
 value = 100;
 value.toUpperCase(); 
+```
 here it will not work because of the type
 
 TypeScript forces we to check the type before using it.
 
 Here we can use the typeof to check the type and than er can procede next
-
+```ts
 if (typeof value === "string") {
   console.log(value.toUpperCase()); 
 }
+```
 
-What is Type Narrowing?
+- What is Type Narrowing?
 
 Type narrowing means refining a broad type into a more specific one.
 
@@ -49,6 +54,7 @@ When we use checks like typeof, instanceof, or custom guards, TypeScript narrows
 
 Here we can give an example of type narrowing:
 
+```ts
 const KgToGMConverter = (input: string | number) : number | undefined => {
     if (typeof input === "number") {
         return input *1000;
@@ -63,7 +69,7 @@ const KgToGMConverter = (input: string | number) : number | undefined => {
 const res1 = KgToGMConverter(10) as number;
 const res2 = KgToGMConverter("5 kg") as number;
 console.log(res1, "gram" , res2, "gram");
-
+```
 
 When should we use each?
 
@@ -82,7 +88,7 @@ Conclusion
 
 In simple terms:
 
-any = No rules → risky
+any = No rules so it is risky
 unknown = Safe by default
 Type narrowing = a way to safely work with unknown data
 
