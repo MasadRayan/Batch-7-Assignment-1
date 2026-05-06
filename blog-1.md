@@ -7,8 +7,10 @@ At first, any feels convenient. No errors, no restrictions. But that convenience
 
 In this blog, we will cover:
 
->What is any and Why Is It Dangerous?
+>What is any and Why Is It Dangerous? 
+
 >Why unknown is a safer alternative
+
 >What type narrowing is and how it works
 
 What is any and Why Is It Dangerous?
