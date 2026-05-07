@@ -43,13 +43,14 @@ interface Book {
     title : string;
     author : string;
     publishedYear : number;
+    isRead ?: boolean    
 }
 
-const toggleReadStatus = (input : Book, isRead?: boolean) => {
-    const bookResult = { ...input , isRead : !isRead}
+
+const toggleReadStatus = (input : Book) => {
+    const bookResult = { ...input , isRead : !input.isRead }
     return bookResult
 }
-
 
 
 
